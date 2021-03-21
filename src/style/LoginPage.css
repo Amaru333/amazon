@@ -1,0 +1,141 @@
+.loginPage,
+.registerPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.loginLogo {
+  width: 103px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.innerElements {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.innerElements > h1 {
+  font-size: 30px;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+.innerElements > p {
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.loginInput {
+  background-color: #fff;
+  height: 31px;
+  width: 350px;
+  padding: 3px 7px;
+  line-height: normal;
+  border: 1px solid #a6a6a6;
+  border-top-color: #949494;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 1px 0 rgba(0, 0, 0, 0.07) inset;
+  outline: 0;
+  width: -webkit-fill-available;
+}
+
+.loginButton {
+  font-size: 14px;
+  font-weight: 200;
+  justify-self: center;
+  align-self: center;
+  margin-top: 15px;
+  background: #f0c14b;
+  border: 1px solid #a88734;
+  border-color: #a88734 #9c7e31 #846a29;
+  background-image: linear-gradient(#faecc8, #f0c14c);
+  cursor: pointer;
+  height: 30px;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.loginButton:hover {
+  background-image: linear-gradient(#ecd8a4, #e9ba43);
+}
+
+.innerBox {
+  border: 1px solid #dddddd;
+  padding: 40px;
+  border-radius: 4px;
+  max-width: 400px;
+}
+
+.terms {
+  margin-top: 10px;
+}
+
+.aDivider {
+  margin-top: 35px;
+}
+
+h5 {
+  width: 400px;
+  text-align: center;
+  border-bottom: 1px solid #e7e7e7;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+  font-weight: 300;
+}
+
+.line {
+  background: #fff;
+  padding: 0 10px;
+}
+
+.registerButton {
+  font-size: 14px;
+  font-weight: 200;
+  justify-self: center;
+  align-self: center;
+  margin-top: 15px;
+  background: #fcfcfd;
+  border: 1px solid #adb1b8;
+  border-color: #adb1b8 #adb1b8 #adb1b8;
+  background-image: linear-gradient(#fcfcfd, #e7e9ec);
+  cursor: pointer;
+  height: 30px;
+  width: 400px;
+  border-radius: 3px;
+  text-align-last: center;
+}
+
+.registerButton:hover {
+  background-image: linear-gradient(#e9e9eb, #d5d7da);
+}
+
+.registerationButton {
+  padding-bottom: 30px;
+}
+
+.errorMessage {
+  margin-top: 5px;
+  align-self: center;
+  color: red;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.successfulMessage {
+  margin-top: 5px;
+  align-self: center;
+  color: rgb(0, 211, 0);
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.outerBox1 {
+  display: flex;
+}

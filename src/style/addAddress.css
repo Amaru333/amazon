@@ -1,0 +1,43 @@
+.addAddress {
+  background-color: white;
+  min-height: 100vh;
+}
+
+.addAddressContents {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30%;
+  margin-right: 30%;
+  justify-content: space-between;
+}
+
+.addAddressField {
+  font-size: 15px;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.addAddressForm {
+  width: 80%;
+}
+
+.profileBox {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.profileBoxMain {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 400px;
+}
+
+.profileTitle {
+  font-weight: bold;
+  width: 150px;
+}

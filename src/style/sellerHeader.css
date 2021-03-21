@@ -1,0 +1,96 @@
+.sellerHeader {
+  background-color: #131921;
+  color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.sellerLogo {
+  width: 90px;
+  margin: 10px 10px 0px 20px;
+}
+
+.headerSearch {
+  padding-top: 3px;
+  padding-right: 10px;
+  display: flex;
+  flex: 1;
+  height: 40px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.searchBar {
+  height: 35px;
+  width: -webkit-fill-available;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+/* .sellerHeaderLogo {
+} */
+
+.headerSearchIcon {
+  background-color: #febd69;
+  color: black;
+  padding: 5px;
+  height: 22px;
+  border-radius: 0px 2px 2px 0px;
+  cursor: pointer;
+}
+
+.headerSearchIcon:hover {
+  background-color: rgb(202, 129, 32);
+}
+
+.headerOptions {
+  color: white;
+  padding-right: 10px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 254, 254, 0);
+}
+
+.headerOptions:hover {
+  border: 1px solid #dddddd;
+  border-radius: 2px;
+}
+
+.sellerLinks {
+  display: flex;
+  flex-direction: row;
+}
+
+.sellerLinks {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.lineOne {
+  font-size: 11px;
+}
+
+.lineTwo {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.headerOptions2 {
+  padding-right: 20px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    width: fit-content;
+  }
+  .searchBar {
+    width: 100px;
+  }
+}
