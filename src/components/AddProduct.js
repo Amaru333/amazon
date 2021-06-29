@@ -20,7 +20,7 @@ function AddProduct() {
   let sellerID = amazonSellerData._id;
   const history = useHistory();
   const addProduct = () => {
-    Axios.post("http://localhost:3001/addProduct", {
+    Axios.post("https://amaru-amazon.herokuapp.com/addProduct", {
       sellerID: sellerID,
       name: productName,
       price: productPrice,
@@ -39,7 +39,7 @@ function AddProduct() {
       } else if (response.data._id) {
         setErrorMsg("");
         setSuccessfulMsg("Product added successfully");
-        Axios.post("http://localhost:3001/seller/addProduct", {
+        Axios.post("https://amaru-amazon.herokuapp.com/seller/addProduct", {
           seller: sellerID,
           product: response.data._id,
         });

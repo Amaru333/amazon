@@ -17,7 +17,7 @@ function AddAddress() {
   let userID = amazoneUserData._id;
   const history = useHistory();
   const addUserAddress = () => {
-    Axios.post("http://localhost:3001/addAddress", {
+    Axios.post("https://amaru-amazon.herokuapp.com/addAddress", {
       houseNo: houseNo,
       addressLine1: addressLine1,
       addressLine2: addressLine2,

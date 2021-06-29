@@ -25,7 +25,7 @@ function ViewProduct() {
   let id = path.slice(4, pathLength);
 
   useEffect(() => {
-    Axios.get(`http://localhost:3001/store/${id}`).then((response) => {
+    Axios.get(`https://amaru-amazon.herokuapp.com/store/${id}`).then((response) => {
       setData(response.data);
       setTotalRating(response.data.review);
       setReviewCount(response.data.review.length);
@@ -172,7 +172,7 @@ function ViewProduct() {
   const outputDate = month + " " + day + "," + year;
 
   const postReview = () => {
-    Axios.post("http://localhost:3001/postReview", {
+    Axios.post("https://amaru-amazon.herokuapp.com/postReview", {
       id: productIDnum,
       reviewerName: user,
       rating: rating,
@@ -231,7 +231,7 @@ function ViewProduct() {
     if (userID === null) {
       window.location.href = "/login";
     } else {
-      Axios.post("http://localhost:3001/addToCart", {
+      Axios.post("https://amaru-amazon.herokuapp.com/addToCart", {
         userid: userID,
         id: data._id,
       }).then((response) => {

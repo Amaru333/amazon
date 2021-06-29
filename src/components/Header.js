@@ -15,7 +15,7 @@ const Header = (props) => {
   // axios.defaults.withCredentials = true;
 
   // useEffect(() => {
-  //   axios.get("http://localhost:3001/login").then((response) => {
+  //   axios.get("https://amaru-amazon.herokuapp.com/login").then((response) => {
   //     console.log(response);
   //     if (response.data.loggedIn === true) {
   //       console.log(response.data.userSession);
@@ -58,7 +58,7 @@ const Header = (props) => {
     cart = amazoneUserData.cart;
     link = `/profile`;
     userID = amazoneUserData._id;
-    Axios.get(`http://localhost:3001/cartLength/${userID}`).then((response) => {
+    Axios.get(`https://amaru-amazon.herokuapp.com/cartLength/${userID}`).then((response) => {
       setCartLength(response.data.cart.length);
     });
   }

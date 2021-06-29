@@ -15,7 +15,7 @@ function SellerRegister() {
   const [successfulMsg, setSuccessfulMsg] = useState("");
   const history = useHistory();
   const registerUser = () => {
-    Axios.post("http://localhost:3001/createSeller", {
+    Axios.post("https://amaru-amazon.herokuapp.com/createSeller", {
       name: registerName,
       mail: registerMail,
       mobile: registerMobile,

@@ -15,11 +15,11 @@ function Cart() {
   let id = amazoneUserData._id;
 
   useEffect(() => {
-    Axios.get(`http://localhost:3001/getCart/${id}`).then(async (response) => {
+    Axios.get(`https://amaru-amazon.herokuapp.com/getCart/${id}`).then(async (response) => {
       setData(response.data.cart);
       for (let i = 0; i < response.data.cart.length; i++) {
         await Axios.get(
-          `http://localhost:3001/getItem/${response.data.cart[i].productID}`
+          `https://amaru-amazon.herokuapp.com/getItem/${response.data.cart[i].productID}`
         ).then((response) => {
           cartItems.push(response.data);
         });

@@ -19,7 +19,7 @@ function EditUserDetails(props) {
   let userPhone = amazoneUserData.mobile;
 
   const updateUser = () => {
-    Axios.post("http://localhost:3001/updateUser", {
+    Axios.post("https://amaru-amazon.herokuapp.com/updateUser", {
       id: userID,
       name: name,
       mail: mail,

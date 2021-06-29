@@ -8,7 +8,7 @@ function DisplayProducts() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/search").then((response) => {
+    Axios.get("https://amaru-amazon.herokuapp.com/search").then((response) => {
       console.log(response.data);
       setData(response.data);
     });

@@ -10,7 +10,7 @@ function ManageAddress() {
   let userID = amazoneUserData._id;
   const [data, setData] = useState([]);
   useEffect(() => {
-    Axios.get(`http://localhost:3001/getAddress/${userID}`).then((response) => {
+    Axios.get(`https://amaru-amazon.herokuapp.com/getAddress/${userID}`).then((response) => {
       setData(response.data.address);
     });
   }, [userID]);

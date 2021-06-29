@@ -19,7 +19,7 @@ function RegisterPage() {
   const [successfulMsg, setSuccessfulMsg] = useState("");
   const history = useHistory();
   const registerUser = () => {
-    Axios.post("http://localhost:3001/createUser", {
+    Axios.post("https://amaru-amazon.herokuapp.com/createUser", {
       name: registerName,
       mail: registerMail,
       mobile: registerMobile,
@@ -39,7 +39,7 @@ function RegisterPage() {
     });
   };
   // const registerUser = () => {
-  //     Axios.post('http://localhost:3001/createUser', {
+  //     Axios.post('https://amaru-amazon.herokuapp.com/createUser', {
   //         name: registerName,
   //         mail: registerMail,
   //         mobile: registerMobile,

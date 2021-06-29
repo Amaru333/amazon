@@ -20,7 +20,7 @@ function SellerLogin(props) {
   Axios.defaults.withCredentials = true;
 
   const loginUser = () => {
-    Axios.post("http://localhost:3001/sellerLogin", {
+    Axios.post("https://amaru-amazon.herokuapp.com/sellerLogin", {
       mail: loginMail,
       password: loginPassword,
     }).then((response) => {
@@ -38,7 +38,7 @@ function SellerLogin(props) {
   };
 
   // useEffect(() => {
-  //   Axios.get("http://localhost:3001/sellerLogin").then((response) => {
+  //   Axios.get("https://amaru-amazon.herokuapp.com/sellerLogin").then((response) => {
   //     console.log(response);
   //     if (response.data.loggedIn === true) {
   //       setSellerInfo(response.data);

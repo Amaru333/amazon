@@ -5,7 +5,7 @@ import Axios from "axios";
 function Address({ userID, addID, houseNum, L1, L2, city, st, pin }) {
   const removeAddress = () => {
     console.log("working");
-    Axios.post("http://localhost:3001/deleteAddress", {
+    Axios.post("https://amaru-amazon.herokuapp.com/deleteAddress", {
       userID: userID,
       addID: addID,
     })

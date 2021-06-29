@@ -4,7 +4,7 @@ import Axios from "axios";
 
 function CartItems({ image, cartID, id, name, price, userID }) {
   const deleteItem = () => {
-    Axios.post("http://localhost:3001/deleteItemFromCart", {
+    Axios.post("https://amaru-amazon.herokuapp.com/deleteItemFromCart", {
       userID: userID,
       cartID: cartID,
     }).then((response) => {
