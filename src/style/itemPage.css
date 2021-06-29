@@ -1,0 +1,73 @@
+.itemPage {
+  background-color: white;
+}
+
+.itemDetails {
+  display: flex;
+  padding-left: 3vw;
+  padding-right: 1vw;
+}
+
+.itemImageContainer > img {
+  width: 25vw;
+  margin-top: 50px;
+  padding-right: 1vw;
+  margin-right: 2vw;
+}
+
+.itemProductDetails > h1 {
+  font-size: 22px;
+  font-weight: normal;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.benefits {
+  display: flex;
+  width: 20vw;
+  text-align: center;
+  padding: 15px 0px 10px 0px;
+}
+
+.benefits > div > img {
+  width: 35px;
+}
+
+.benefits > div > p {
+  font-size: 14px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.star {
+  cursor: pointer;
+}
+
+.halfLine {
+  position: relative;
+}
+
+.halfLine::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 3%;
+  width: 94%;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+progress {
+  border-radius: 5px;
+  height: 20px;
+  border: 1px solid #e6e6e6;
+}
+progress::-webkit-progress-bar {
+  background-color: #f0f2f2;
+  border-radius: 5px;
+}
+progress::-webkit-progress-value {
+  background-color: #ffa41c;
+  border-radius: 0px;
+}

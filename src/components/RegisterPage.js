@@ -6,6 +6,10 @@ import { Helmet } from "react-helmet";
 import Axios from "axios";
 
 function RegisterPage() {
+  let aData = JSON.parse(window.localStorage.getItem("amazoneUser"));
+  if (aData) {
+    window.location.href = "/profile";
+  }
   const [registerName, setRegisterName] = useState("");
   const [registerMail, setRegisterMail] = useState("");
   const [registerMobile, setRegisterMobile] = useState("");

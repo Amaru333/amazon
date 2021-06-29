@@ -16,6 +16,9 @@ import SellerLogin from "./components/SellerLogin";
 import Seller from "./components/Seller";
 import SellerHeader from "./components/SellerHeader";
 import AddProduct from "./components/AddProduct";
+import DisplayProducts from "./components/DisplayProducts";
+import ViewProduct from "./components/ViewProduct";
+import Cart from "./components/Cart";
 
 function App() {
   const [userInfo, setUserInfo] = useState({});
@@ -75,6 +78,18 @@ function App() {
               <EditUserDetails
                 isUserLoggedIn={(userData) => isUserLoggedIn(userData)}
               />
+            </Route>
+            <Route path="/s" exact>
+              <Header userData={userInfo} />
+              <DisplayProducts />
+            </Route>
+            <Route path="/cart" exact>
+              <Header userData={userInfo} />
+              <Cart />
+            </Route>
+            <Route path="/gp/:id">
+              <Header userData={userInfo} />
+              <ViewProduct />
             </Route>
             <Route path="/seller/register" exact>
               <SellerHeader />

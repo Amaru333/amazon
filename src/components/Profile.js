@@ -2,8 +2,15 @@ import React from "react";
 import ProfileComponents from "./ProfileComponents";
 import "../style/Profile.css";
 import { Helmet } from "react-helmet";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import { useHistory } from "react-router-dom";
 
 function Profile() {
+  const history = useHistory();
+  const logout = () => {
+    localStorage.removeItem("amazoneUser");
+    setTimeout(() => history.push("/"), 300);
+  };
   return (
     <div className="profile">
       <Helmet>
@@ -30,6 +37,28 @@ function Profile() {
             src="https://images-na.ssl-images-amazon.com/images/G/31/x-locale/cs/ya/images/address-map-pin._CB485934183_.png"
             link="/profile/user/address"
           />
+        </div>
+        <div className="outerProfileContainer" style={{ marginTop: "30px" }}>
+          <div>
+            <div
+              className="ProfileComponents"
+              style={{ cursor: "pointer", width: "19vw" }}
+              onClick={logout}
+            >
+              <div className="ProfileinnerElements">
+                <ExitToAppIcon
+                  className="profileImageComponents"
+                  style={{ fontSize: "45px", color: "#b7b8bb" }}
+                />
+                <div className="ProfileinnerElementsText">
+                  <h3 className="ProfileinnerElementsTitle">Sign out</h3>
+                  <p className="ProfileinnerElementsDesc">
+                    Log out of your Amazon account
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

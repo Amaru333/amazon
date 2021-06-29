@@ -1,0 +1,77 @@
+.displayProducts {
+  background-color: white;
+  display: flex;
+  padding-right: 20px;
+}
+
+.displayProductsInResult {
+  display: flex;
+  border-bottom: rgb(190, 190, 190) solid 1px;
+  padding: 20px;
+}
+
+.imageInResults {
+  max-width: 200px;
+  min-height: 150px;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.results {
+  margin-left: 8px;
+}
+
+.searchResultsTitle {
+  font-weight: normal;
+}
+
+.displayProductsInResultTitle {
+  margin-top: 10px;
+  font-size: 18px;
+  color: black;
+  font-weight: 400;
+}
+
+.displayProductsInResultPrice {
+  color: #b12724;
+  font-size: 21px;
+}
+
+.resultPageTitle {
+  display: flex;
+  border-bottom: rgb(190, 190, 190) solid 1px;
+  padding: 10px;
+}
+
+.displayProductsRating {
+  margin: 4px 0px 4px 0px;
+}
+
+.sort {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 14vw;
+  border-right: rgb(190, 190, 190) solid 1px;
+}
+
+.inputs {
+  display: flex;
+}
+
+label {
+  margin-left: 5px;
+  margin-bottom: 3px;
+}
+
+.checkbox {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.deptTitle {
+  margin-left: 15px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}

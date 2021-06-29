@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style/header.css";
 import Logo from "../images/logo.png";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import SearchIcon from "@material-ui/icons/Search";
 import { Link } from "react-router-dom";
 // import { LoginContext } from "../Context/LoginContext";
-// import axios from "axios";
+import Axios from "axios";
 
 const Header = (props) => {
   // const { userInfo, setUserInfo } = useContext(LoginContext);
@@ -46,13 +46,21 @@ const Header = (props) => {
 
   let userName = `Sign In`;
   let link = `/login`;
+  let cart = [];
+  let userID = "";
+  const [cartLength, setCartLength] = useState(0);
   // console.log(props.userData.name);
   if (window.localStorage.getItem("amazoneUser")) {
     let amazoneUserData = JSON.parse(
       window.localStorage.getItem("amazoneUser")
     );
     userName = amazoneUserData.name;
+    cart = amazoneUserData.cart;
     link = `/profile`;
+    userID = amazoneUserData._id;
+    Axios.get(`http://localhost:3001/cartLength/${userID}`).then((response) => {
+      setCartLength(response.data.cart.length);
+    });
   }
 
   return (
@@ -74,10 +82,24 @@ const Header = (props) => {
         <span className="lineOne">Returns</span>
         <span className="lineTwo">& Orders</span>
       </div>
-      <div className="headerOptions2">
-        <ShoppingCartIcon />
-        <p>Cart (0)</p>
-      </div>
+      <Link
+        to={link === "/profile" ? "/cart" : "/login"}
+        style={{ textDecoration: "none", color: "white" }}
+      >
+        <div
+          className="headerOptions"
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            height: "40px",
+            alignItems: "center",
+            marginRight: "15px",
+          }}
+        >
+          <ShoppingCartIcon />
+          <p>Cart ({cartLength})</p>
+        </div>
+      </Link>
     </div>
   );
 };

@@ -15,6 +15,11 @@ function LoginPage(props) {
   const history = useHistory();
   // const [loginStatus, setLoginStatus] = useState("");
 
+  let aData = JSON.parse(window.localStorage.getItem("amazoneUser"));
+  if (aData) {
+    window.location.href = "/profile";
+  }
+
   const { setUserInfo } = useContext(LoginContext);
 
   Axios.defaults.withCredentials = true;
